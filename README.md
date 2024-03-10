@@ -19,7 +19,7 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 
 # File hierarchy
 1. build directory - iso image, bin files
-2. source directory - Code of FoxyOS (boot.asm)
+2. source directory - Code of FoxyOS (boot.asm, kernel/print.asm)
 
 # Compile
 Compile assembly files with nasm to bin file. Then compile bin file to iso image with UltraISO, PowerISO, etc... Done!
