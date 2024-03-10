@@ -1,6 +1,13 @@
 # FoxyOS
 Welcome to the FoxyOS page written in nasm x86. FoxyOS is the lightest and fastest operating system, with frequent updates.
 
+# Features
+- It starts
+- No text output
+- No user input
+- No internet service
+- No filesystem
+
 # System Requirements
 - CPU: any (more powerful than 8086 CPU)
 - GPU: any
