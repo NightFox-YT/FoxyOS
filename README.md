@@ -1,5 +1,5 @@
 # FoxyOS
-Welcome to the FoxyOS page written in nasm x86. FoxyOS is the lightest and fastest operating system, with frequent updates.
+Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operation system, with frequent updates.
 
 ▪ language in files (comments) - Russian
 
@@ -20,3 +20,6 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is the lightest and faste
 # File hierarchy
 1. build directory - iso image, bin files
 2. source directory - Code of FoxyOS (boot.asm)
+
+# Compile
+Compile assembly files with nasm to bin file. Then compile bin file to iso image with UltraISO, PowerISO, etc... Done!
