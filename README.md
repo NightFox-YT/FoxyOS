@@ -1,11 +1,11 @@
-# FoxyOS
+# FoxyOS v0.02
 Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operation system, with frequent updates.
 
 ▪ language in files (comments) - Russian
 
 # Features
 - It starts
-- No text output
+- Output "Welcome..." 😀
 - No user input
 - No internet service
 - No sounds
