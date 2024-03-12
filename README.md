@@ -28,3 +28,6 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 1. Compile assembly files with nasm to bin file. (Command: nasm -f bin boot.asm -o boot.bin)
 2. Compile bin file to iso image with UltraISO, PowerISO, etc...
 3. Done!
+
+# Photo
+<img src="Screenshot.PNG" alt="" title="FoxyOS">
