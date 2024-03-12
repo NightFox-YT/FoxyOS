@@ -22,7 +22,7 @@ setup:
     jmp main
 
 ; [Function] Print
-%include "kernel/print.asm"
+%include "source/kernel/print.asm"
 
 main:
     mov si, msg_welcome   ; Загружаем приветствие
