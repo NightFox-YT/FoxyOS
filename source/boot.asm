@@ -22,7 +22,7 @@ setup:
     jmp main
 
 ; [Function] Print
-%include "/root/FoxyOS/source/kernel/print.asm"
+%include "kernel/print.asm"
 
 main:
     mov si, msg_welcome   ; Загружаем приветствие
