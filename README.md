@@ -5,6 +5,8 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 
 ▪ language in files (comments) - Russian
 
+▪ Real size (Code): 5 bytes
+
 # Features
 - It starts
 - No text output
