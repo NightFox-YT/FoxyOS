@@ -1,7 +1,7 @@
 # FoxyOS v0.03
 Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operation system, with frequent updates.
 
-❗ Attention: there are new versions of FoxyOS, support for this version will end on 08.04.
+✅ There is a latest version, support is enabled.
 
 ▪ language in files (comments) - Russian
 
@@ -10,15 +10,6 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 # New features
 - Read 2 sector from floppy disk. (Reading)
 
-# New features
-- Output "Welcome..." text.
-
-# System Requirements
-- CPU: 8086 CPU
-- GPU: any
-- RAM: 512 byte
-- Motherboard: support BIOS
-
 # Features
 - It starts
 - Output "Welcome..." 😀
@@ -26,6 +17,12 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 - No internet service
 - No sounds
 - No filesystem, but can read sectors from floppy disk and load it into RAM
+
+# System Requirements
+- CPU: 8086 CPU
+- GPU: any
+- RAM: 512 byte
+- Motherboard: support BIOS
 
 # File hierarchy
 1. build directory - floppy image, bin files
