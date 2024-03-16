@@ -5,13 +5,18 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 
 ▪ language in files (comments) - Russian
 
+▪ Real size (Code): 330 bytes
+
+# New features
+- Read 2 sector from floppy disk. (Reading)
+
 # Features
 - It starts
 - Output "Welcome..." 😀
 - No user input
 - No internet service
 - No sounds
-- No filesystem
+- No filesystem, but can read sectors from floppy disk and load it into RAM
 
 # System Requirements
 - CPU: 8086 CPU
@@ -20,14 +25,12 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 - Motherboard: support BIOS
 
 # File hierarchy
-1. build directory - iso image, bin files
-2. source directory - Code of FoxyOS (boot.asm, kernel/print.asm)
-3. Documentation.txt - There are missing comments that are often repeated in code
+1. build directory - floppy image, bin files
+2. source directory - Code of FoxyOS (boot.asm)
 
 # Compile
-1. Compile assembly files with nasm to bin file. (Command: nasm -f bin boot.asm -o boot.bin)
-2. Compile bin file to iso image with UltraISO, PowerISO, etc...
-3. Done!
+1. Compile code with Makefile
+2. Done!
 
 # Photo
 <img src="Screenshot.PNG" alt="" title="FoxyOS">
