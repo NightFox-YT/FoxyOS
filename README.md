@@ -10,6 +10,12 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 # New features
 - Read second sector from floppy disk. (Reading)
 
+# System Requirements
+- CPU: 8086 CPU
+- GPU: any
+- RAM: 512 byte
+- Motherboard: support BIOS
+
 # Features
 - It starts
 - Output "Welcome..." 😀
@@ -17,12 +23,6 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 - No internet service
 - No sounds
 - FAT12, but only can read sectors from floppy disk and load it into RAM
-
-# System Requirements
-- CPU: 8086 CPU
-- GPU: any
-- RAM: 512 byte
-- Motherboard: support BIOS
 
 # File hierarchy
 1. build directory - floppy image, bin files
