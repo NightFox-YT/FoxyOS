@@ -8,7 +8,7 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 ▪ Real size (Code): 330 bytes
 
 # New features
-- Read 2 sector from floppy disk. (Reading)
+- Read second sector from floppy disk. (Reading)
 
 # Features
 - It starts
