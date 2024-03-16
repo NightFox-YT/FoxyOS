@@ -16,7 +16,7 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 - No user input
 - No internet service
 - No sounds
-- No filesystem, but can read sectors from floppy disk and load it into RAM
+- FAT12, but only can read sectors from floppy disk and load it into RAM
 
 # System Requirements
 - CPU: 8086 CPU
