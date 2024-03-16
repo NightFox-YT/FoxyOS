@@ -1,7 +1,7 @@
 # FoxyOS v0.02
 Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operation system, with frequent updates.
 
-✅ There is a latest version, support is enabled.
+❗ Attention: there are new versions of FoxyOS, support for this version will end on 08.04.
 
 ▪ language in files (comments) - Russian
 
