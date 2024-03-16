@@ -7,6 +7,15 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 
 ▪ Real size (Code): 54 bytes
 
+# New features
+- Output "Welcome..." text.
+
+# System Requirements
+- CPU: 8086 CPU
+- GPU: any
+- RAM: 512 byte
+- Motherboard: support BIOS
+
 # Features
 - It starts
 - Output "Welcome..." 😀
@@ -14,12 +23,6 @@ Welcome to the FoxyOS page written in nasm x86. FoxyOS is light and fast operati
 - No internet service
 - No sounds
 - No filesystem
-
-# System Requirements
-- CPU: 8086 CPU
-- GPU: any
-- RAM: 512 byte
-- Motherboard: support BIOS
 
 # File hierarchy
 1. build directory - iso image, bin files
