@@ -35,9 +35,9 @@ ebr_volume_id:             db 91h, 98h, 21h, 66h   ; Серийный номер
 ebr_volume_label:          db '   FOXYOS  '        ; Название тома (11 байт, дополнять пробелами)
 ebr_system_id:             db 'FAT12   '           ; Версия FAT (FAT12, FAT16..., 8 байт)
 
-; [Code] Основной код FoxyOS
+; [Code] Основной код FoxyOS / 448 байт
 setup:
-    ; [RAM] Настройка сегментов / Очистка (Стек растёт вниз!)
+    ; [RAM] Настройка сегментов / Очистка (Стек растёт вниз)
     mov ax, 0
     mov ds, ax
     mov es, ax
@@ -51,7 +51,7 @@ setup:
 %include "source/kernel/print.asm"
 
 main:
-    mov dl, [ebr_drive_number] ; Чтение с floppy диска
+    mov dl, [ebr_drive_number] ; Устройство для чтения - floppy диск
 
     mov ax, 1                  ; LBA = 1 / Второй сектор
     mov cl, 1                  ; Кол-во секторов
@@ -61,15 +61,15 @@ main:
     mov si, msg_welcome        ; "Приветствие"
     call print
 
-    cli                        ; Отключаем прерывания, чтобы процессор не смог выйти из состояния "halt".
-    hlt                        ; Остановка CPU
+    cli
+    hlt
 
-; [Disk] Код на чтение диска и др.
+; [Disk] Чтение диска и др.
 %include "source/disk/lba_to_chs.asm"
 %include "source/disk/read.asm"
 
 ; [Messages]
-msg_welcome:        db 'Welcome...', ENTER, 0
+msg_welcome:        db 'Welcome.', ENTER, 0
 
 err_read_failed:    db '[Critical] Read failed...', 0
 msg_read_success:   db '[Success] Read LBA ', 0
