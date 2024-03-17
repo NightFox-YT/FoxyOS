@@ -4,11 +4,11 @@ FoxyOS is light and fast operation system, with frequent updates.
 
 ❗ Attention: there are came out new versions of FoxyOS, support with new updates for this version will end on 08.04.
 
-▪ language in code (comments) - Russian
+▪ language in code (Comments) - Russian
 
 ▪ Real size (Code): 52 bytes (+2 bytes - signature)
 
-# New features
+# Changelog
 - Output "Welcome..." text.
 
 # System Requirements
