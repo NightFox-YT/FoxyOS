@@ -28,6 +28,7 @@ FoxyOS is light and fast operation system, with frequent updates.
 # File hierarchy
 1. build directory - floppy image, bin files
 2. source directory - Code of FoxyOS (boot.asm, kernel/print.asm, kernel/main.asm, disk/lba_to_chs.asm, disk/read.asm)
+3. Documentation.txt - There are missing comments that are often repeated in code
 
 # Compile
 1. Compile code with Makefile (On Linux)
