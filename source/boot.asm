@@ -21,7 +21,7 @@ bdb_fat_count:             db 2                    ; Кол-во fat табли�
 bdb_dir_entries_count:     dw 0E0h                 ; Кол-во записей корневого каталога
 bdb_total_sectors:         dw 2880                 ; Кол-во секторов (2880 * 512 = 1.44 мб)
 bdb_media_descriptor_type: db 0F0h                 ; Тип диска (F0 = 3.5" floppy disk)
-bdb_sectors_per_fat:       dw 9                    ; Кол-во секторов на fat таблицу
+bdb_sectors_per_fat:       dw 9                    ; Кол-во секторов на fat
 bdb_sectors_per_track:     dw 18                   ; Кол-во секторов на дорожку
 bdb_heads:                 dw 2                    ; Кол-во голов
 bdb_hidden_sectors:        dd 0                    ; Кол-во скрытых секторов
@@ -32,8 +32,8 @@ ebr_drive_number:          db 0                    ; Номер диска (0x00
                            db 0                    ; Резерв
 ebr_signature:             db 29h                  ; Подпись (0x28 или 0x29)
 ebr_volume_id:             db 91h, 98h, 21h, 66h   ; Серийный номер (не имеет значения на систему)
-ebr_volume_label:          db '   FOXYOS  '        ; Название тома (11 байт, дополнять пробелами)
-ebr_system_id:             db 'FAT12   '           ; Версия FAT (FAT12, FAT16..., 8 байт)
+ebr_volume_label:          db '   FOXYOS  '        ; Название тома (дополнять пробелами / 11 байт)
+ebr_system_id:             db 'FAT12   '           ; Версия FAT (FAT12, FAT16... / 8 байт)
 
 ; [Code] Основной код FoxyOS / 448 байт
 setup:
@@ -64,7 +64,7 @@ main:
     cli
     hlt
 
-; [Disk] Чтение диска и др.
+; [Disk] Чтение и др.
 %include "source/disk/lba_to_chs.asm"
 %include "source/disk/read.asm"
 
