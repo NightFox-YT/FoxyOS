@@ -9,7 +9,7 @@ FoxyOS is light and fast operation system, with frequent updates.
 ▪ Real size (Code): 330 bytes (+2 bytes - signature)
 
 # Changelog
--  (Reading) Read second sector from floppy disk.
+- (Reading) Read second sector from floppy disk.
 
 # System Requirements
 - CPU: 8086 CPU
