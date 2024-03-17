@@ -6,7 +6,7 @@ FoxyOS is light and fast operation system, with frequent updates.
 
 ▪ language in code (Comments) - Russian
 
-▪ Real size (Code) - 3 bytes (+2 bytes - signature)
+▪ Real size (Code) - 3 bytes (+2 bytes - signature AA55)
 
 # Features
 - It starts 😀
@@ -17,9 +17,9 @@ FoxyOS is light and fast operation system, with frequent updates.
 - No filesystem 😢
 
 # System Requirements
-- CPU: 8086 CPU
+- CPU: x86
 - GPU: any
-- RAM: 512 byte
+- RAM: 512 bytes
 - Motherboard: support BIOS
 
 # File hierarchy
@@ -34,6 +34,6 @@ FoxyOS is light and fast operation system, with frequent updates.
 
 # Review
 
-▪ on youtube - https://www.youtube.com/watch?v=TtToONIEczo
+▪ Youtube - https://www.youtube.com/watch?v=TtToONIEczo
 
 <img src="Screenshot.PNG" alt="" title="FoxyOS">
