@@ -2,6 +2,21 @@
 ; (MainFox) 2023 - 2024
 ; =======================
 
+; [Disk] Ошибки
+floppy_error:
+    mov si, err_read_failed   ; "Чтение с диска не удалось"
+    call print
+    jmp wait_key_and_reboot
+
+wait_key_and_reboot:
+    mov ah, 0                 ; [Setting]
+    int 16h                   ; Ждём нажатия
+    jmp 0FFFFh:0              ; Переходим в конец BIOS для перезагрузки
+
+.halt:
+    cli
+    hlt
+
 ; [Disk] Чтение с диска
 ; Параметры:
 ;   - ax - LBA адрес
@@ -15,11 +30,11 @@ disk_read:
     push dx
     push di
 
-    push cx                  ; Сохраняем cl (кол-во секторов для чтения)
+    push cx                  ; Сохраняем cl (кол-во секторов)
     call lba_to_chs          ; Вычисляем CHS адрес
-    pop ax                   ; Восстанавливаем cl в al = кол-во секторов для чтения
+    pop ax                   ; Восстанавливаем cl в al = кол-во секторов
     
-    mov ah, 02h              ; [Setting] Значение для чтения
+    mov ah, 02h              ; [Setting]
     mov di, 3                ; [Setting] Кол-во попыток
 
 .retry:
@@ -37,7 +52,7 @@ disk_read:
     jnz .retry               ; Если нет, пробуем заново
 
 .fail:
-    jmp floppy_error         ; Все попытки исчерпаны
+    jmp floppy_error         ; Если все попытки исчерпаны
 
 .done:   
     popa
@@ -49,8 +64,8 @@ disk_read:
     pop ax
 
 .output:
-    test cl, cl              ; Проверяем cl
-    jz .leave                ; Если 0, значит все сообщения вывели
+    test cl, cl              ; Проверяем cl (равен 0?)
+    jz .leave                ; Если 0, значит все сообщения вывели, выходим
 
     mov si, msg_read_success ; "Успешное чтение сектора по адресу: "
     call print
@@ -75,27 +90,10 @@ disk_read:
 ;   dl - тип диска (номер)
 disk_reset:
     pusha
-
-    mov ah, 0        ; [Setting] Значение для сброса диска
+    mov ah, 0        ; [Setting]
     stc              ; Устанавливаем carry flag (некоторые BIOS не устанавливают их)
     int 13h          ; Вызываем прерывание на операцию с диском
     jc floppy_error  ; Если carry flag не чист, значит диск сломался...
-
     popa
 
     ret
-
-; [Disk] Ошибки
-floppy_error:
-    mov si, err_read_failed   ; "Чтение с диска не удалось"
-    call print
-    jmp wait_key_and_reboot
-
-wait_key_and_reboot:
-    mov ah, 0                 ; [Setting] Значение для чтения с клавиатуры
-    int 16h                   ; Ждём нажатия на кнопку
-    jmp 0FFFFh:0              ; Переходим в конец BIOS для перезагрузки
-
-.halt:
-    cli                       ; Отключаем прерывания, таким образом, процессор не сможет выйти из состояния "halt".
-    hlt                       ; Остановка CPU

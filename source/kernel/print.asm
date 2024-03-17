@@ -10,7 +10,7 @@ print:
 	push ax
 	push bx
 
-	mov bh, 0           ; [Setting] Номер страницы, текстового режима
+	mov bh, 0           ; [Setting] Номер страницы для текстового режима
 
 .loop:
 	lodsb               ; Загружаем символ из si в al
