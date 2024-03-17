@@ -24,7 +24,7 @@ FoxyOS is light and fast operation system, with frequent updates.
 
 # File hierarchy
 1. Build directory - iso images, bin file
-2. Source directory - Code of FoxyOS (boot.asm)
+2. Source directory - code of FoxyOS (boot.asm)
 
 # Compile
 1. Compile assembly files with nasm to bin file. (Command: nasm -f bin boot.asm -o boot.bin)
