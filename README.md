@@ -27,7 +27,7 @@ FoxyOS is light and fast operation system, with frequent updates.
 2. Source directory - Code of FoxyOS (boot.asm)
 
 # Compile
-1. Compile assembly files with nasm to bin file. (Command: nasm -f bin boot.asm -o boot.bin or Use compile_windows.bat on windows)
+1. Compile assembly files with nasm to bin file. (Command: nasm -f bin boot.asm -o boot.bin)
 2. [For VM] Compile bin file to iso image with UltraISO, PowerISO, etc...
 2. [For Real hardware] Rename boot.bin to FoxyOS.iso
 3. Done!
